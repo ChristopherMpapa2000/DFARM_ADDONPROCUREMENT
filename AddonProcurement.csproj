@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D83FBB30-A9FC-4A46-996A-0E7CC47DD16B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AddonProcurement</RootNamespace>
+    <AssemblyName>AddonProcurement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WolfApprove.API2">
+      <HintPath>D:\Back_dev\dev26\WolfApprove\WolfApprove.API2\bin\WolfApprove.API2.dll</HintPath>
+    </Reference>
+    <Reference Include="WolfApprove.Model">
+      <HintPath>D:\Back_dev\dev26\WolfApprove\WolfApprove.API2\bin\WolfApprove.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\GRServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\VendorMasterServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AddonController.cs" />
+    <Compile Include="Extention\CoreAPI.cs" />
+    <Compile Include="Handlers\AddonApiVersionRedirectHandler.cs" />
+    <Compile Include="Helpers\AddonMiddlewareRegistration.cs" />
+    <Compile Include="Helpers\AdvanceFormExt.cs" />
+    <Compile Include="Helpers\BudgetType.cs" />
+    <Compile Include="Helpers\WriteLogFile.cs" />
+    <Compile Include="Managers\AddonManager.cs" />
+    <Compile Include="Models\AddonFormModel.cs" />
+    <Compile Include="Models\BudgetReportItem.cs" />
+    <Compile Include="Models\CustomEntity\Models\BaseEntity.cs" />
+    <Compile Include="Models\CustomEntity\Models\BudgetTracking.cs" />
+    <Compile Include="Models\CustomEntity\Models\BudgetTrackingGLSummary.cs" />
+    <Compile Include="Models\CustomEntity\Models\BudgetTrackingIOSummary.cs" />
+    <Compile Include="Models\CustomEntity\Models\BudgetTrackingSummary.cs" />
+    <Compile Include="Models\CustomEntity\Models\MSTAssets.cs" />
+    <Compile Include="Models\CustomEntity\Models\MSTCategoryProduct.cs" />
+    <Compile Include="Models\CustomEntity\Models\RelationBudget.cs" />
+    <Compile Include="Models\CustomEntity\Models\ViewCostcenterOrganizer.cs" />
+    <Compile Include="Models\CustomEntity\Models\ZSYNCBUDGET.cs" />
+    <Compile Include="Models\CustomEntity\Models\ZSYNCCC.cs" />
+    <Compile Include="Models\CustomEntity\Models\ZSYNCGL.cs" />
+    <Compile Include="Models\CustomEntity\Models\ZSYNCIO.cs" />
+    <Compile Include="Models\CustomEntity\TLIContext.cs" />
+    <Compile Include="Models\CustomEntity\Models\BudgetTransaction.cs" />
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\RefModel.cs" />
+    <Compile Include="Models\RequestModel\RequestCheckBudget.cs" />
+    <Compile Include="Models\RequestModel\RequestCustomeMasterData.cs" />
+    <Compile Include="Models\RequestModel\RequestInputGRMaster.cs" />
+    <Compile Include="Models\RequestModel\RequestInputVendorMaster.cs" />
+    <Compile Include="Models\RequestModel\RequestMadvanceForm.cs" />
+    <Compile Include="Models\RequestModel\RequestReportBudget.cs" />
+    <Compile Include="Models\ResponeBeen.cs" />
+    <Compile Include="Models\ResponeModel\InsertGRCustomResponeModel.cs" />
+    <Compile Include="Models\ResponeModel\MAdvancveFormResponeModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\GRServiceReference\SI_TLI_PurchaseOnline_SYNC_SND.wsdl" />
+    <None Include="Connected Services\GRServiceReference\ThaiLifeAddon.GRServiceReference.DT_RTN_AAI001_SNDItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GRServiceReference\ThaiLifeAddon.GRServiceReference.SI_TLI_PurchaseOnline_SYNC_SNDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VendorMasterServiceReference\SI_TLI_BPMaster_SYNC_SND.wsdl" />
+    <None Include="Connected Services\VendorMasterServiceReference\ThaiLifeAddon.VendorMasterServiceReference.DT_RTN_API003_SNDItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VendorMasterServiceReference\ThaiLifeAddon.VendorMasterServiceReference.SI_TLI_BPMaster_SYNC_SNDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\DtoModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GRServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\VendorMasterServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VendorMasterServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VendorMasterServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VendorMasterServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GRServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GRServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GRServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>3.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core">
+      <Version>5.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

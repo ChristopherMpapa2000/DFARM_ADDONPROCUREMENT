@@ -1,0 +1,2 @@
+C:\AddonProcurement\ThaiLifeAddon\obj\Debug\ThaiLifeAddon.csproj.AssemblyReference.cache
+C:\AddonProcurement\ThaiLifeAddon\obj\Debug\ThaiLifeAddon.csproj.CoreCompileInputs.cache

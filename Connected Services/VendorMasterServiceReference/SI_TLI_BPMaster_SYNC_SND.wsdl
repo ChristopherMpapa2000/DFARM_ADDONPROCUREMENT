@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:thailife.com:ACT:AP:API003" name="SI_TLI_BPMaster_SYNC_SND" targetNamespace="urn:thailife.com:ACT:AP:API003" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_TLI_BPMaster_SYNC_SND" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:thailife.com:ACT:AP:API003" targetNamespace="urn:thailife.com:ACT:AP:API003" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_TLI_API003_SND" type="p1:DT_TLI_API003_SND" />
+      <xsd:element name="MT_RTN_API003_SND" type="p1:DT_RTN_API003_SND" />
+      <xsd:complexType name="DT_TLI_API003_SND">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">2de56a6f7b6f11e98dac00000043f9c2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="row">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">4475c1886cb611e9c02500fffea470ee</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="Activity" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590ea6cb511e98d8800000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Activity</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="PartnerNumber" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590eb6cb511e9939d00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>รหัสผู้ขาย</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="BPGroup" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590ec6cb511e9bf7f00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>B103 : Purchase Supplier</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="Name1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590ed6cb511e98f3b00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อเจ้าหนี้</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Name2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590ee6cb511e98be200000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อเจ้าหนี้</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Name3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590ef6cb511e9b2cc00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อเจ้าหนี้</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Name4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f06cb511e9995f00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อเจ้าหนี้</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SearchTerm1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f16cb511e980ac00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ระหัสย่อ</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="SearchTerm2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f26cb511e9bb8400000043f9c2</xsd:appinfo>
+                    <xsd:documentation>รหัสสาขาตามที่จดทะเบียน สาขา</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="Street" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f36cb511e9a7c200000043f9c2</xsd:appinfo>
+                    <xsd:documentation>บ้านเลขที่ อาคาร หมู่บ้าน ชั้น ห้อง</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Street2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f46cb511e9913500000043f9c2</xsd:appinfo>
+                    <xsd:documentation>บ้านเลขที่ อาคาร หมู่บ้าน ชั้น ห้อง</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Street3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f56cb511e9a28500000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อถนน</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Street4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f66cb511e9b5f700000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อแขวง</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Dirtric" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f76cb511e98bf100000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ชื่อเขต</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PostalCode" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">abe5daa0707911e9b994025666646664</xsd:appinfo>
+                    <xsd:documentation>รหัสไปรณีย์</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="City" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f86cb511e9cce800000043f9c2</xsd:appinfo>
+                    <xsd:documentation>จังหวัด</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="Country" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">44758bb96cb611e98bef00fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Country</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="TaxCategory" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590f96cb511e987db00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Tax category ระบุ TH3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="TaxID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590fa6cb511e99b4100000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ระบุเลขประจำตัวผู้เสียภาษี</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TradingPartner" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590fb6cb511e9afb700000043f9c2</xsd:appinfo>
+                    <xsd:documentation>รหัสย่อบริษัทในเครือ</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590fc6cb511e9b3ef00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Running number</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BankCountry" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590fd6cb511e9851100000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ประเทศที่ธนาคารที่เจ้าหนี้มีบัญชีอยุ่</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BankKey" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590fe6cb511e983f700000043f9c2</xsd:appinfo>
+                    <xsd:documentation>รหัสธนาคาร + รหัสสาขา</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BankAccountNumber" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e590ff6cb511e9bfdc00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>เลขที่เงินฝากธนาคาร</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="InstructionKey" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591006cb511e9b00100000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ระบุผู้รับภาระค่าธรรมเนียมการโอนเงิน</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="CompanyCode" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591016cb511e9a51b00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>รหัสบริษัท</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="ReconciliationAcct" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591026cb511e988cd00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>บัญชีคุมเจ้าหนี้ (GL Account)</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SortKey" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591036cb511e9970900000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Sort key</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="PaymentTerm" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591046cb511e9a6aa00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Credit term ที่ได้รับจากเจ้าหนี้</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PaymentMethod" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591056cb511e9cd1d00000043f9c2</xsd:appinfo>
+                    <xsd:documentation>วิธีการจ่ายชำระเงิน</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTType1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591066cb511e9894600000043f9c2</xsd:appinfo>
+                    <xsd:documentation>WHT Type 1</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SubjectTax1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591076cb511e9c0c900000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Subject tax 1</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTCode1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591086cb511e9801000000043f9c2</xsd:appinfo>
+                    <xsd:documentation>ประเภทเงินได้ที่จะให้ Withholding tax</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TypeOfRecipient1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a6e591096cb511e9c80300000043f9c2</xsd:appinfo>
+                    <xsd:documentation>Type of Recipient 1</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTType2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">4475c1846cb611e993dd00fffea470ee</xsd:appinfo>
+                    <xsd:documentation>WHT Type 2</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SubjectTax2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">4475c1856cb611e9a48400fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Subject tax 2</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTCode2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">4475c1866cb611e9a1d200fffea470ee</xsd:appinfo>
+                    <xsd:documentation>ประเภทเงินได้ที่จะให้ Withholding tax</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TypeOfRecipient2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">4475c1876cb611e9ce1900fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Type of Recipient 2</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTType3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">867e7c046cb611e9b2db00fffea470ee</xsd:appinfo>
+                    <xsd:documentation>WHT Type 3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SubjectTax3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b21d9a376cb611e9952300fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Subject tax 3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTCode3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b21d9a386cb611e9932d00fffea470ee</xsd:appinfo>
+                    <xsd:documentation>ประเภทเงินได้ที่จะให้ Withholding tax</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TypeOfRecipient3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b21d9a396cb611e98bf100fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Type of Recipient 3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTType4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">ded836be6cb611e9c4fe00fffea470ee</xsd:appinfo>
+                    <xsd:documentation>WHT Type 4</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SubjectTax4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6e786376cb611e9ca3700fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Subject tax 4</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WHTCode4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">184be40a6cb711e9b0f500fffea470ee</xsd:appinfo>
+                    <xsd:documentation>ประเภทเงินได้ที่จะให้ Withholding tax</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TypeOfRecipient4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">33cc8c2b6cb711e9850600fffea470ee</xsd:appinfo>
+                    <xsd:documentation>Type of Recipient 4</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="Branch" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c33b3722707811e9c81a025666646664</xsd:appinfo>
+                    <xsd:documentation>Branch</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BranchDes" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">34787d5b7b6f11e9c16000ffe0292c17</xsd:appinfo>
+                    <xsd:documentation>Branch Description</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PostingBlock" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c33b3723707811e9b6bd025666646664</xsd:appinfo>
+                    <xsd:documentation>PostingBlock</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MarkForDelete" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c33b3724707811e98327025666646664</xsd:appinfo>
+                    <xsd:documentation>MarkForDelete</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_RTN_API003_SND">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">1567023f777911e9a3f400000043f9c2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">68c6e4d5777411e9836600ffb06b1417</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="TYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6540c777411e9a93400ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message type: S Success, E Error, W Warning, I Info, A Abort</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6540d777411e9b71400ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Class</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NUMBER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6540e777411e9891b00ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Number</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MESSAGE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6540f777411e989b100ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Text</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LOG_NO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c65410777411e9a42c00ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Application log: log number</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LOG_MSG_NO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c65411777411e98f6500ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Application log: Internal message serial number</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MESSAGE_V1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c65412777411e9c28700ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Variable</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MESSAGE_V2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6b5d4777411e98ba900ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Variable</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MESSAGE_V3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6b5d5777411e9907900ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Variable</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MESSAGE_V4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6e4d0777411e9939f00ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Message Variable</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PARAMETER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6e4d1777411e98d3c00ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Parameter Name</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ROW" type="xsd:integer">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6e4d2777411e9958200ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Lines in parameter</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="FIELD" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6e4d3777411e9c8b000ffb06b1417</xsd:appinfo>
+                    <xsd:documentation> in parameter</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SYSTEM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">68c6e4d4777411e9826400ffb06b1417</xsd:appinfo>
+                    <xsd:documentation>Logical system from which message originates</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_TLI_API003_SND">
+    <wsdl:documentation />
+    <wsdl:part name="MT_TLI_API003_SND" element="p1:MT_TLI_API003_SND" />
+  </wsdl:message>
+  <wsdl:message name="MT_RTN_API003_SND">
+    <wsdl:documentation />
+    <wsdl:part name="MT_RTN_API003_SND" element="p1:MT_RTN_API003_SND" />
+  </wsdl:message>
+  <wsdl:portType name="SI_TLI_BPMaster_SYNC_SND">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_TLI_BPMaster_SYNC_SND">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_TLI_BPMaster_SYNC_SND" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_TLI_API003_SND" />
+      <wsdl:output message="p1:MT_RTN_API003_SND" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_TLI_BPMaster_SYNC_SNDBinding" type="p1:SI_TLI_BPMaster_SYNC_SND">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_TLI_BPMaster_SYNC_SND">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_TLI_BPMaster_SYNC_SNDService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_TLI_BPMaster_SYNC_SNDBinding">
+      <address location="http://c3vmutws02.thailife.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PROXY&amp;receiverParty=&amp;receiverService=&amp;interface=SI_TLI_BPMaster_SYNC_SND&amp;interfaceNamespace=urn%3Athailife.com%3AACT%3AAP%3AAPI003" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_TLI_BPMaster_SYNC_SNDBinding">
+      <address location="https://c3vmutws02.thailife.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PROXY&amp;receiverParty=&amp;receiverService=&amp;interface=SI_TLI_BPMaster_SYNC_SND&amp;interfaceNamespace=urn%3Athailife.com%3AACT%3AAP%3AAPI003" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
